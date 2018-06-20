@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet author="litvas" id="20180620-1">
+
+        <insert tableName="bus">
+            <column name="manufacturer" value="Scania"/>
+            <column name="model" value="105"/>
+            <column name="number" value="ag150ap"/>
+            <column name="quantity_of_seats" value="45"/>
+        </insert>
+
+        <insert tableName="bus">
+            <column name="manufacturer" value="Neoplan"/>
+            <column name="model" value="206"/>
+            <column name="number" value="ag450ap"/>
+            <column name="quantity_of_seats" value="90"/>
+        </insert>
+
+        <insert tableName="bus">
+            <column name="manufacturer" value="Man"/>
+            <column name="model" value="450"/>
+            <column name="number" value="ag750ap"/>
+            <column name="quantity_of_seats" value="31"/>
+        </insert>
+
+        <insert tableName="route">
+            <column name="point_of_start" value="Kiev"/>
+            <column name="point_of_finish" value="Odessa"/>
+            <column name="time_of_start" value="0000-00-00 22:00:00"/>
+            <column name="time_of_finish" value="0000-00-00 06:05:00"/>
+        </insert>
+
+        <insert tableName="route">
+            <column name="point_of_start" value="Uman"/>
+            <column name="point_of_finish" value="Odessa"/>
+            <column name="time_of_start" value="0000-00-00 22:00:00"/>
+            <column name="time_of_finish" value="0000-00-00 06:05:00"/>
+        </insert>
+
+        <insert tableName="park_worker">
+            <column name="dtype" value="park_worker"/>
+            <column name="surename" value="Ivanov"/>
+            <column name="name" value="Ivan"/>
+            <column name="patronymic" value="Ivanych"/>
+            <column name="role" value="admin"/>
+            <column name="salary" value="10000"/>
+            <column name="route_for_today_id"/>
+            <column name="bus_id"/>
+            <column name="availability"/>
+        </insert>
+
+        <insert tableName="park_worker">
+            <column name="dtype" value="driver"/>
+            <column name="surename" value="Ivanov"/>
+            <column name="name" value="Ivan"/>
+            <column name="patronymic" value="Ivanych"/>
+            <column name="role" value="driver"/>
+            <column name="salary" value="10000"/>
+            <column name="route_for_today_id" value="1"/>
+            <column name="bus_id" value="2"/>
+            <column name="availability" valueBoolean="false"/>
+        </insert>
+
+        <insert tableName="park_worker">
+            <column name="dtype" value="driver"/>
+            <column name="surename" value="Ivanov"/>
+            <column name="name" value="Ivan"/>
+            <column name="patronymic" value="Ivanych"/>
+            <column name="role" value="driver"/>
+            <column name="salary" value="10000"/>
+            <column name="route_for_today_id"/>
+            <column name="bus_id"/>
+            <column name="availability" valueBoolean="true"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>
