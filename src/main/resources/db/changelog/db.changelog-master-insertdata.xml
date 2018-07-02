@@ -44,9 +44,10 @@
 
         <insert tableName="park_worker">
             <column name="dtype" value="park_worker"/>
-            <column name="surename" value="Ivanov"/>
-            <column name="name" value="Ivan"/>
-            <column name="patronymic" value="Ivanych"/>
+            <column name="surename" value="Adminov"/>
+            <column name="name" value="Admin"/>
+            <column name="patronymic" value="Adminych"/>
+            <column name="password" value="Adminych"/>
             <column name="role" value="admin"/>
             <column name="salary" value="10000"/>
             <column name="route_for_today_id"/>
@@ -56,9 +57,10 @@
 
         <insert tableName="park_worker">
             <column name="dtype" value="driver"/>
-            <column name="surename" value="Ivanov"/>
-            <column name="name" value="Ivan"/>
-            <column name="patronymic" value="Ivanych"/>
+            <column name="surename" value="Petrov"/>
+            <column name="name" value="Petr"/>
+            <column name="patronymic" value="Petrovich"/>
+            <column name="password" value="Petrovich"/>
             <column name="role" value="driver"/>
             <column name="salary" value="10000"/>
             <column name="route_for_today_id" value="1"/>
@@ -71,6 +73,7 @@
             <column name="surename" value="Ivanov"/>
             <column name="name" value="Ivan"/>
             <column name="patronymic" value="Ivanych"/>
+            <column name="password" value="Ivanych"/>
             <column name="role" value="driver"/>
             <column name="salary" value="10000"/>
             <column name="route_for_today_id"/>

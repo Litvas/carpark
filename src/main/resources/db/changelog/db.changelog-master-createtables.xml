@@ -35,6 +35,7 @@
             <column name="surename" type="varchar(256)"/>
             <column name="name" type="varchar(256)"/>
             <column name="patronymic" type="varchar(256)"/>
+            <column name="password" type="varchar(256)"/>
             <column name="role" type="varchar(20)"/>
             <column name="salary" type="bigint"/>
             <column name="route_for_today_id" type="bigint"/>
