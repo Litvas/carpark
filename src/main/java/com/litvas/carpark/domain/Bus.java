@@ -18,6 +18,7 @@ public class Bus {
 
     private int quantityOfSeats;
 
+
     public Long getId() {
         return id;
     }
@@ -56,16 +57,5 @@ public class Bus {
 
     public void setQuantityOfSeats(int quantityOfSeats) {
         this.quantityOfSeats = quantityOfSeats;
-    }
-
-    @Override
-    public String toString() {
-        return "Bus{" +
-                "id=" + id +
-                ", manufacturer='" + manufacturer + '\'' +
-                ", model='" + model + '\'' +
-                ", number='" + number + '\'' +
-                ", quantityOfSeats=" + quantityOfSeats +
-                '}';
     }
 }

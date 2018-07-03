@@ -9,7 +9,6 @@ import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -17,6 +16,8 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.springframework.http.MediaType.APPLICATION_JSON_UTF8;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(controllers = BusController.class)
@@ -27,7 +28,6 @@ public class BusControllerTest {
 
     @MockBean
     private BusController busController;
-
 
     @MockBean
     private BusService busService;
@@ -54,7 +54,7 @@ public class BusControllerTest {
 
         mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/carpark/bus"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(MockMvcResultMatchers.content().contentType(APPLICATION_JSON_UTF8))
                 .andExpect(MockMvcResultMatchers.jsonPath("[0].manufacturer").value("scania"))
                 .andExpect(MockMvcResultMatchers.jsonPath("[0].model").value("405"))
                 .andExpect(MockMvcResultMatchers.jsonPath("[0].number").value("aa505sd"))

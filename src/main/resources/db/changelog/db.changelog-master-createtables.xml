@@ -36,11 +36,20 @@
             <column name="name" type="varchar(256)"/>
             <column name="patronymic" type="varchar(256)"/>
             <column name="password" type="varchar(256)"/>
-            <column name="role" type="varchar(20)"/>
             <column name="salary" type="bigint"/>
             <column name="route_for_today_id" type="bigint"/>
             <column name="bus_id" type="bigint"/>
             <column name="availability" type="bit(1)"/>
+        </createTable>
+
+        <createTable tableName="role">
+            <column name="role_id" type="integer" />
+            <column name="role" type="varchar(256)"/>
+        </createTable>
+
+        <createTable tableName="park_worker_role">
+            <column name="id" type="bigint"/>
+            <column name="role_id" type="integer"/>
         </createTable>
 
     </changeSet>

@@ -2,6 +2,7 @@ package com.litvas.carpark.domain;
 
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table
@@ -17,9 +18,11 @@ public class ParkWorker {
 
     private String patronymic;
 
-    private String role;
-
     private long salary;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "park_worker_role", joinColumns = @JoinColumn(name = "id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles;
 
     public Long getId() {
         return id;
@@ -51,14 +54,6 @@ public class ParkWorker {
 
     public void setPatronymic(String patronymic) {
         this.patronymic = patronymic;
-    }
-
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
     }
 
     public long getSalary() {

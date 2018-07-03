@@ -48,7 +48,6 @@
             <column name="name" value="Admin"/>
             <column name="patronymic" value="Adminych"/>
             <column name="password" value="Adminych"/>
-            <column name="role" value="admin"/>
             <column name="salary" value="10000"/>
             <column name="route_for_today_id"/>
             <column name="bus_id"/>
@@ -61,7 +60,6 @@
             <column name="name" value="Petr"/>
             <column name="patronymic" value="Petrovich"/>
             <column name="password" value="Petrovich"/>
-            <column name="role" value="driver"/>
             <column name="salary" value="10000"/>
             <column name="route_for_today_id" value="1"/>
             <column name="bus_id" value="2"/>
@@ -74,11 +72,35 @@
             <column name="name" value="Ivan"/>
             <column name="patronymic" value="Ivanych"/>
             <column name="password" value="Ivanych"/>
-            <column name="role" value="driver"/>
             <column name="salary" value="10000"/>
             <column name="route_for_today_id"/>
             <column name="bus_id"/>
             <column name="availability" valueBoolean="true"/>
+        </insert>
+
+        <insert tableName="role">
+            <column name="role_id" value="1"/>
+            <column name="role" value="admin"/>
+        </insert>
+
+        <insert tableName="role">
+            <column name="role_id" value="2"/>
+            <column name="role" value="user"/>
+        </insert>
+
+        <insert tableName="park_worker_role">
+            <column name="id" value="1"/>
+            <column name="role_id" value="1"/>
+        </insert>
+
+        <insert tableName="park_worker_role">
+            <column name="id" value="2"/>
+            <column name="role_id" value="2"/>
+        </insert>
+
+        <insert tableName="park_worker_role">
+            <column name="id" value="3"/>
+            <column name="role_id" value="2"/>
         </insert>
 
     </changeSet>
