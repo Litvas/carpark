@@ -47,8 +47,9 @@
             <column name="surename" value="Adminov"/>
             <column name="name" value="Admin"/>
             <column name="patronymic" value="Adminych"/>
-            <column name="password" value="Adminych"/>
+            <column name="password" value="$2a$04$gI9PlaObfJOBByxH4EA8yeiGthOvZ6EaHsZJHAKAXmR4E.j1g2qvS"/>
             <column name="salary" value="10000"/>
+            <column name="active" value="1"/>
             <column name="route_for_today_id"/>
             <column name="bus_id"/>
             <column name="availability"/>
@@ -59,8 +60,9 @@
             <column name="surename" value="Petrov"/>
             <column name="name" value="Petr"/>
             <column name="patronymic" value="Petrovich"/>
-            <column name="password" value="Petrovich"/>
+            <column name="password" value="$2a$04$/afFHvqJIUWSw/PNqW6OlevERbazSp/sw5DbRX8JAL6d.LH7zF3uy"/>
             <column name="salary" value="10000"/>
+            <column name="active" value="1"/>
             <column name="route_for_today_id" value="1"/>
             <column name="bus_id" value="2"/>
             <column name="availability" valueBoolean="false"/>
@@ -71,8 +73,9 @@
             <column name="surename" value="Ivanov"/>
             <column name="name" value="Ivan"/>
             <column name="patronymic" value="Ivanych"/>
-            <column name="password" value="Ivanych"/>
+            <column name="password" value="$2a$04$Cl4FAAKGGsdOYjwYUZnGE.dqmwADaA9Vsh3ScFwvbiE..tMTxH20q"/>
             <column name="salary" value="10000"/>
+            <column name="active" value="0"/>
             <column name="route_for_today_id"/>
             <column name="bus_id"/>
             <column name="availability" valueBoolean="true"/>

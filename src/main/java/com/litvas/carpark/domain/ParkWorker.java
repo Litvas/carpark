@@ -20,6 +20,8 @@ public class ParkWorker {
 
     private long salary;
 
+    private int active;
+
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "park_worker_role", joinColumns = @JoinColumn(name = "id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
@@ -64,4 +66,19 @@ public class ParkWorker {
         this.salary = salary;
     }
 
+    public int getActive() {
+        return active;
+    }
+
+    public void setActive(int active) {
+        this.active = active;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
 }

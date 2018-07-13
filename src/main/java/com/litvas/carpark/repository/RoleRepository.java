@@ -1,12 +1,12 @@
 package com.litvas.carpark.repository;
 
-import com.litvas.carpark.domain.ParkWorker;
+import com.litvas.carpark.domain.Role;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ParkWorkerRepository extends CrudRepository<ParkWorker, Long> {
+public interface RoleRepository extends CrudRepository<Role, Long> {
 
-    ParkWorker findByName(String name);
+    Role findByRole(String role);
 
 }

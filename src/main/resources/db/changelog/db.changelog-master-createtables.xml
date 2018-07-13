@@ -37,6 +37,7 @@
             <column name="patronymic" type="varchar(256)"/>
             <column name="password" type="varchar(256)"/>
             <column name="salary" type="bigint"/>
+            <column name="active" type="integer"/>
             <column name="route_for_today_id" type="bigint"/>
             <column name="bus_id" type="bigint"/>
             <column name="availability" type="bit(1)"/>
